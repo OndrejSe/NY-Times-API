@@ -1,4 +1,4 @@
-import key from "./config/config.js";
+import key from "./config.js";
 
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
