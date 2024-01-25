@@ -1,3 +1,5 @@
+import key from "./config.js";
+
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const main = document.querySelector('main');
@@ -7,8 +9,6 @@ const articleContainer = document.getElementById('article-container')
 const articleSearch = document.querySelector('.article-search')
 const searchButton = document.querySelector('.search-button')
 const searchInput = document.querySelector('.search-input')
-
-const key = window._env.MY_NYT_API_KEY;
 
 const getCurrentDateInWords = () => {
     const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }
