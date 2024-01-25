@@ -1,0 +1,330 @@
+:root {
+    --color-bg: #f4f0e8;
+    --color-main: #111827;
+    --color-sub: #4b5563;
+    --color-main-hover: #374151;
+    --color-sub-hover: #6b7280;
+    --color-error: #5e1914;
+    --color-input: #eee8dd;
+    --color-input-focus: #f9fafb;
+
+    --border-bold: 2px solid var(--color-main);
+
+    --smooth-transition: all 0.2s ease-in-out;
+
+    --max-content-width: 80rem;
+    --max-search-width: 60rem;
+    --margin-content-middle: 0 auto;
+}
+
+/* DEFAULT */
+
+* {
+    font-family: 'Lora','Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color: var(--color-bg);
+    padding: 1.5rem;
+}
+
+/* HEADER */
+
+header {
+    max-width: var(--max-content-width);
+    margin: var(--margin-content-middle);
+}
+
+.header-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.nyt-logo {
+    display: block;
+    width: 16rem;
+    margin: var(--margin-content-middle);
+}
+
+.article-search {
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+    margin: 1rem auto;
+    border: 2px solid var(--color-input);
+    border-radius: 2rem;
+    transition: var(--smooth-transition);
+    max-width: 36rem;
+}
+
+.article-search:hover {
+    cursor: pointer;
+    background-color: var(--color-input);
+}
+
+.article-search:focus-within {
+    background-color: var(--color-input-focus);
+    cursor: auto;
+}
+
+.article-search:focus-within .search-button:hover {
+    color: var(--color-sub-hover);
+}
+
+.search-button {
+    font-size: 1.125rem;
+    margin-right: 1rem;
+    color: var(--color-sub);
+    transition: var(--smooth-transition);
+}
+
+.search-input {
+    color: var(--color-sub);
+    font-weight: 500;
+    font-size: 1rem;
+    width: 100%;
+    padding-right: 1rem;
+    transition: var(--smooth-transition);
+}
+
+.search-input:hover {
+    cursor: pointer;
+}
+
+.search-input:focus-within {
+    cursor: auto;
+}
+
+.search-input:-webkit-autofill,
+.search-input:-webkit-autofill:hover,
+.search-input:-webkit-autofill:focus, 
+.search-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--color-bg) inset !important;
+    -webkit-text-fill-color: var(--color-sub);
+}
+
+.article-search:hover .search-input:-webkit-autofill,
+.article-search:hover .search-input:-webkit-autofill:hover,
+.article-search:hover .search-input:-webkit-autofill:focus, 
+.article-search:hover .search-input:-webkit-autofill:active 
+{
+    -webkit-box-shadow: 0 0 0 30px var(--color-input) inset !important;
+    -webkit-text-fill-color: var(--color-sub);
+}
+
+.article-search:focus-within .search-input:-webkit-autofill,
+.article-search:focus-within .search-input:-webkit-autofill:hover,
+.article-search:focus-within .search-input:-webkit-autofill:focus, 
+.article-search:focus-within .search-input:-webkit-autofill:active 
+{
+    -webkit-box-shadow: 0 0 0 30px var(--color-input-focus) inset !important;
+    -webkit-text-fill-color: var(--color-sub);
+}
+
+nav {
+    border-top: var(--border-bold);
+    border-bottom: var(--border-bold);
+    padding: 0.75rem 0;
+}
+
+#current-date {
+    color: var(--color-main);
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: var(--margin-content-middle);
+}
+
+#current-date:hover {
+    color: var(--color-main-hover);
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    max-width: var(--max-content-width);
+    margin: var(--margin-content-middle);
+}
+
+#article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.error-message {
+    color: var(--color-error);
+    font-weight: 500;
+    margin: var(--margin-content-middle);
+}
+
+.error-message i {
+    display: block;
+    width: fit-content;
+    font-size: 1.25rem;
+    margin: var(--margin-content-middle);
+}
+
+.search-header {
+    width: 100%;
+    max-width: var(--max-search-width);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.search-header.no-result {
+    width: fit-content;
+    text-align: center;
+}
+
+.article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.article.search-result {
+    width: 100%;
+    max-width: var(--max-search-width);
+}
+
+.article-title {
+    margin-bottom: 0.25rem;
+    color: var(--color-main);
+    font-size: 1.25rem;
+    transition: var(--smooth-transition);
+}
+
+.article:hover .article-title {
+    color: var(--color-main-hover)
+}
+
+.by-line {
+    display: block;
+    font-weight: 700;
+    color: var(--color-sub);
+}
+
+.article:hover .by-line {
+    color: var(--color-sub-hover);
+}
+
+.abstract {
+    color: var(--color-sub);
+}
+
+.article:hover .abstract {
+    color: var(--color-sub-hover);
+}
+
+/* FOOTER */
+
+footer {
+    max-width: var(--max-content-width);
+    margin: var(--margin-content-middle);
+    margin-top: auto;
+    border-top: var(--border-bold);
+    border-bottom: var(--border-bold);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.copyright {
+    color: var(--color-main);
+    padding: 0 0.5rem;
+}
+
+.dev-info {
+    color: var(--color-sub);
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dev-info-link {
+    color: var(--color-sub);
+    transition: var(--smooth-transition);
+}
+
+.dev-info-link:hover {
+    color: var(--color-sub-hover);
+}
+
+@media only screen and (min-width: 576px) {
+    body {
+        padding: 2rem;
+    }
+    .nyt-logo {
+        width: 24rem;
+    }
+    .article {
+        width: calc(50% - 0.75rem);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        padding: 2.5rem;
+    }
+    .nyt-logo {
+        width: 36rem;
+    }
+    #article-container {
+        gap: 2rem;
+    }
+    .article {
+        width: calc(100%/3 - 4rem/3);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        padding: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .article {
+        width: calc(25% - 1.5rem);
+    }
+}

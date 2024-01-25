@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New York Times API</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet"></head>
+    <script src="https://kit.fontawesome.com/e6a3eae7fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<body>
+    <header>
+        <button class="header-logo">
+            <img src="./images/NewYorkTimes.svg" alt="" class="nyt-logo">
+        </button>
+        <form class="article-search">
+            <button type="button"><i class="fa-solid fa-magnifying-glass search-button"></i></button>
+            <input type="text" maxlength="60" id="search" class="search-input" placeholder="Search our articles...">
+        </form>
+        <nav>
+            <button id="current-date">Wednesday, September 30, 2024</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="article-container">
+            <!-- Articles loaded through NY Times API -->
+        </div>
+    </main>
+
+    <footer>
+        <span class="copyright">©<span id="current-year">2024</span> The New York Times Company.</span>
+        <div class="dev-info">
+            <span class="author-info">Training project developed and designed by <a href="https://www.linkedin.com/in/ondřej-sedlák-278535298" target="_blank" class="dev-info-link">Ondřej Sedlák</a>.</span>
+            <span>This project uses The New York Times <a href="https://developer.nytimes.com/docs/top-stories-product/1/overview" target="_blank" class="dev-info-link">Top Stories</a> and <a href="https://developer.nytimes.com/docs/articlesearch-product/1/overview" target="_blank" class="dev-info-link">Article Search</a> APIs.</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
