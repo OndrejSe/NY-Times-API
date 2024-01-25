@@ -8,7 +8,7 @@ const articleSearch = document.querySelector('.article-search')
 const searchButton = document.querySelector('.search-button')
 const searchInput = document.querySelector('.search-input')
 
-const key = window._env.REACT_APP_MY_NYT_API_KEY;
+const key = window._env.MY_NYT_API_KEY;
 
 const getCurrentDateInWords = () => {
     const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }
